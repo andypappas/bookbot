@@ -1,5 +1,12 @@
+def sort_on(dict):
+    return dict["num"]
+
 def sort_list(dict):
-    return dict[char]
+    chars_list = []
+    for char, count in dict.items():
+        chars_list.append({"char": char, "num": count})
+    chars_list.sort(reverse=True, key=sort_on)
+    return chars_list
 
 def count_letters(book):
     book_text = book.lower()
